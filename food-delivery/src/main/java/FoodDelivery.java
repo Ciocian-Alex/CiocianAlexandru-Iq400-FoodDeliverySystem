@@ -42,7 +42,7 @@ public class FoodDelivery {
 
     public double discountedValue() {
         //TODO(implementation)
-        return 0.0;
+        return ;
     }
 
     public Map<VehicleType, Double> computeIncomesPerVehicleType() {

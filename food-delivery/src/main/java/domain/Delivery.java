@@ -60,13 +60,30 @@ public class Delivery {
 
     public void addItem(Item item) {
         //TODO(implementation)
+    	if(item.getName() !=null && item.getName()!=" " && item.getPrice()>0) {
+    		items.add(duration, item);
+    	}
     }
 
     public void removeItem(String itemName) {
         //TODO(implementation)
+    	int count=0;
+    	int j=-1;
+    	for(int i=0;i<items.size();i++) {
+    		if(items.get(i).getName() == itemName) {
+    		count++;
+    		j=i;
+    		}
+    	}
+    	if(count>=1 && j >= 0) {
+    		items.remove(j);
+    	}
     }
-
     public void computeTotalValue() {
         //TODO(implementation)
+    	double sum =0.;
+    	for(int i=0;i<items.size();i++) {
+    	sum += items.get(i).getPrice();
+    	}
     }
 }
